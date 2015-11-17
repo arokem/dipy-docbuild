@@ -6,7 +6,8 @@ python-dipy \
 python-pip \
 git \
 python-cvxopt \
-Xvfb
+Xvfb \
+python-vtk6
 RUN pip install --upgrade dipy
 RUN pip install cython
 RUN pip install sphinx
