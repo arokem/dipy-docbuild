@@ -7,7 +7,8 @@ python-pip \
 git \
 python-cvxopt \
 Xvfb \
-python-vtk
+python-vtk \
+texlive-full
 RUN pip install --upgrade dipy
 RUN pip install cython
 RUN pip install sphinx
