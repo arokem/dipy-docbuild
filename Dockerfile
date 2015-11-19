@@ -8,7 +8,9 @@ git \
 python-cvxopt \
 Xvfb \
 python-vtk \
-texlive-full
+texlive-latex-recommended \
+texlive-latex-extra \
+texlive-fonts-recommended
 RUN pip install --upgrade dipy
 RUN pip install cython
 RUN pip install sphinx
