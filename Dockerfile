@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 MAINTAINER Ariel Rokem <arokem@gmail.com>
-# Install sklearn, in case you want to run SFM with ElasticNet:
+# Install all the optional dependencies (sklearn, cvxopt, vtk):
 RUN apt-get update && apt-get install -y python-sklearn \
 python-dipy \
 python-pip \
@@ -16,4 +16,4 @@ RUN pip install cython
 RUN pip install sphinx
 RUN pip install xvfbwrapper
 ENV TEST_WITH_XVFB=true
-CMD git clone https://github.com/nipy/dipy.git && cd dipy && python setup.py install && cd doc && make upload
+CMD git clone https://github.com/nipy/dipy.git && cd dipy && git checkout maint/0.10.x && python setup.py install && cd doc && make upload
