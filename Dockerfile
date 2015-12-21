@@ -1,17 +1,12 @@
-FROM ubuntu:14.04
+FROM arokem/dipy
 MAINTAINER Ariel Rokem <arokem@gmail.com>
 # Install all the optional dependencies (sklearn, cvxopt, vtk):
-RUN apt-get update && apt-get install -y python-sklearn \
-python-dipy \
-python-pip \
-git \
-python-cvxopt \
+RUN apt-get update && apt-get install -y git \
 Xvfb \
 python-vtk \
 texlive-latex-recommended \
 texlive-latex-extra \
 texlive-fonts-recommended
-RUN pip install --upgrade dipy
 RUN pip install cython
 RUN pip install sphinx
 RUN pip install xvfbwrapper
